@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: org.cti_echipa6.cti35p6.dao.book.AuthorRepositoryTest
+-------------------------------------------------------------------------------
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.14 s - in org.cti_echipa6.cti35p6.dao.book.AuthorRepositoryTest

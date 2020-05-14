@@ -1,0 +1,10 @@
+org/cti_echipa6/cti35p6/controller/book/BookControllerTest.class
+org/cti_echipa6/cti35p6/model/business/TransactionTest.class
+org/cti_echipa6/cti35p6/dao/business/TransactionRepositoryTest.class
+org/cti_echipa6/cti35p6/controller/book/AuthorControllerTest.class
+org/cti_echipa6/cti35p6/Cti35p6ApplicationTests.class
+org/cti_echipa6/cti35p6/dao/book/AuthorRepositoryTest.class
+org/cti_echipa6/cti35p6/dao/business/ClientRepositoryTest.class
+org/cti_echipa6/cti35p6/controller/business/ClientControllerTest.class
+org/cti_echipa6/cti35p6/controller/business/TransactionControllerTest.class
+org/cti_echipa6/cti35p6/dao/book/BookRepositoryTest.class

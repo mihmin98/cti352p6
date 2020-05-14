@@ -1,0 +1,13 @@
+org/cti_echipa6/cti35p6/dao/book/BookRepository.class
+org/cti_echipa6/cti35p6/model/book/Author.class
+org/cti_echipa6/cti35p6/controller/business/TransactionController.class
+org/cti_echipa6/cti35p6/model/business/Client.class
+org/cti_echipa6/cti35p6/controller/book/BookController.class
+org/cti_echipa6/cti35p6/controller/book/AuthorController.class
+org/cti_echipa6/cti35p6/Cti35p6Application.class
+org/cti_echipa6/cti35p6/model/book/Book.class
+org/cti_echipa6/cti35p6/model/business/Transaction.class
+org/cti_echipa6/cti35p6/dao/business/TransactionRepository.class
+org/cti_echipa6/cti35p6/controller/business/ClientController.class
+org/cti_echipa6/cti35p6/dao/book/AuthorRepository.class
+org/cti_echipa6/cti35p6/dao/business/ClientRepository.class

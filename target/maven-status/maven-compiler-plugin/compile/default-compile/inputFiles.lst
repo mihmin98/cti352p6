@@ -1,0 +1,13 @@
+/home/mih/Facultate/MDS/cti35p6/src/main/java/org/cti_echipa6/cti35p6/dao/book/AuthorRepository.java
+/home/mih/Facultate/MDS/cti35p6/src/main/java/org/cti_echipa6/cti35p6/dao/business/ClientRepository.java
+/home/mih/Facultate/MDS/cti35p6/src/main/java/org/cti_echipa6/cti35p6/controller/business/ClientController.java
+/home/mih/Facultate/MDS/cti35p6/src/main/java/org/cti_echipa6/cti35p6/Cti35p6Application.java
+/home/mih/Facultate/MDS/cti35p6/src/main/java/org/cti_echipa6/cti35p6/model/book/Author.java
+/home/mih/Facultate/MDS/cti35p6/src/main/java/org/cti_echipa6/cti35p6/model/book/Book.java
+/home/mih/Facultate/MDS/cti35p6/src/main/java/org/cti_echipa6/cti35p6/dao/book/BookRepository.java
+/home/mih/Facultate/MDS/cti35p6/src/main/java/org/cti_echipa6/cti35p6/dao/business/TransactionRepository.java
+/home/mih/Facultate/MDS/cti35p6/src/main/java/org/cti_echipa6/cti35p6/controller/book/AuthorController.java
+/home/mih/Facultate/MDS/cti35p6/src/main/java/org/cti_echipa6/cti35p6/controller/book/BookController.java
+/home/mih/Facultate/MDS/cti35p6/src/main/java/org/cti_echipa6/cti35p6/controller/business/TransactionController.java
+/home/mih/Facultate/MDS/cti35p6/src/main/java/org/cti_echipa6/cti35p6/model/business/Transaction.java
+/home/mih/Facultate/MDS/cti35p6/src/main/java/org/cti_echipa6/cti35p6/model/business/Client.java
