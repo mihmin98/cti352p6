@@ -1,0 +1,160 @@
+<div class="view">
+    <div class="container-fluid mb-5">
+        <h4>{{ title }}</h4>
+        <h6>Pacient id: {{ pacient.id }}</h6>
+        <form #pacientForm="ngForm">
+            <div class="viewName">
+                <div class="viewFirstName">
+                    <div class="form-group">
+                        <label>First Name</label>
+                        <input type="text" required #firstName="ngModel"
+                            pattern="[a-zA-Z]{3,30}" 
+                            [class.is-invalid]="firstName.invalid && firstName.touched"
+                            [class.is-valid]="firstName.valid"
+                            class="form-control" name="firstName" [(ngModel)]="pacient.firstName">
+                        <div *ngIf="firstName.errors && (firstName.invalid || firstName.touched)">
+                            <small class="text-danger"  *ngIf="firstName.errors.required">First name is required</small>
+                            <small class="text-danger"  *ngIf="firstName.errors.pattern">First name must be between 3 and 30 characters</small>
+                        </div>
+                    </div>
+                </div>
+        
+                <div class="viewLastName">
+                    <div class="form-group">
+                        <label>Last Name</label>
+                        <input type="text" required #lastName="ngModel"
+                            pattern="[a-zA-Z]{3,30}"
+                            [class.is-invalid]="lastName.invalid && lastName.touched"
+                            [class.is-valid]="lastName.valid"
+                            class="form-control" name="lastName" [(ngModel)]="pacient.lastName">
+                        <div *ngIf="lastName.errors && (lastName.invalid || lastName.touched)">
+                            <small class="text-danger"  *ngIf="lastName.errors.required">Last name is required</small>
+                            <small class="text-danger"  *ngIf="lastName.errors.pattern">Last name must be betwen 3 and 30 characters</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="viewCI">
+                <div class="viewCNP">
+                    <div class="form-group">
+                        <label>CNP</label>
+                        <input type="number" required #cnp="ngModel"
+                            pattern="^\d{13}$"
+                            [class.is-invalid]="cnp.invalid && cnp.touched"
+                            [class.is-valid]="cnp.valid"
+                            class="form-control" name="cnp" [(ngModel)]="pacient.cnp">
+                        <div *ngIf="cnp.errors && (cnp.invalid || cnp.touched)">
+                            <small class="text-danger"  *ngIf="cnp.errors.required">CNP is required</small>
+                            <small class="text-danger"  *ngIf="cnp.errors.pattern">CNP must be 13 digits</small>
+                        </div>
+                    </div> 
+                </div> 
+
+                <div class="viewSeriaAndNumber">
+                    <div class="viewSeria">
+                        <div class="form-group">
+                            <label>Seria</label>
+                            <input type="text" required #seria="ngModel"
+                                pattern="[a-zA-Z]{2}"
+                                [class.is-invalid]="seria.invalid && seria.touched"
+                                [class.is-valid]="seria.valid"
+                                class="form-control" name="seria" [(ngModel)]="pacient.seria">
+                            <div *ngIf="seria.errors && (seria.invalid || seria.touched)">
+                                <small class="text-danger"  *ngIf="seria.errors.required">Seria is required</small>
+                                <small class="text-danger"  *ngIf="seria.errors.pattern">Seria must be 2 characters</small>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div class="viewNumber">
+                        <div class="form-group">
+                            <label>Number</label>
+                            <input type="number" required #number="ngModel"
+                                pattern="^\d{6}$"
+                                [class.is-invalid]="number.invalid && number.touched"
+                                [class.is-valid]="number.valid"
+                                class="form-control" name="number" [(ngModel)]="pacient.number">
+                            <div *ngIf="number.errors && (number.invalid || number.touched)">
+                                <small class="text-danger"  *ngIf="number.errors.required">Seria is required</small>
+                                <small class="text-danger"  *ngIf="number.errors.pattern">Seria must be 6 digits</small>
+                            </div>
+                        </div>
+                    </div> 
+                </div>
+            </div>
+        
+            <div class="viewGenderAndBirthdate">
+                <div class="viewGender">
+                    <div class="form-group">
+                        <label for="gender">Gender</label>
+                        <select class="custom-select" name="gender" [(ngModel)]="pacient.gender">
+                            <option *ngFor="let gender of genders">{{ gender }}</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="viewBirthdate">
+                    <div class="form-group">
+                        <label for="dob">Birthdate</label>
+                        <input type="date" required #dob="ngModel"
+                               [class.is-invalid]="dob.invalid && dob.touched"
+                               [class.is-valid]="dob.valid"
+                               class="form-control" name="dob" [(ngModel)]="pacient.dob">
+                        <div *ngIf="dob.errors && (dob.invalid || dob.touched)">
+                            <small class="text-danger"  *ngIf="dob.errors.required">Date of birth is required</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="form-group">
+                <label for="supplier">Service supplier</label>
+                <input type="text" required #supplier="ngModel"
+                       pattern="[a-zA-Z]{3,30}"
+                       [class.is-invalid]="supplier.invalid && supplier.touched"
+                       [class.is-valid]="supplier.valid"
+                       class="form-control" name="supplier" [(ngModel)]="pacient.supplier">
+                <div *ngIf="supplier.errors && (supplier.invalid || supplier.touched)">
+                    <small class="text-danger"  *ngIf="supplier.errors.required">Service supplier is required</small>
+                    <small class="text-danger"  *ngIf="supplier.errors.pattern">Service supplier must be betwen 3 and 30 characters</small>
+                </div>
+            </div>
+        
+            <div class="form-group">
+                <label for="subscription">Medical subscription</label>
+                <input type="text" #subscription="ngModel"
+                       [class.is-invalid]="subscription.invalid && subscription.touched"
+                       [class.is-valid]="subscription.valid"
+                       class="form-control" name="subscription" [(ngModel)]="pacient.subscription">
+                <div *ngIf="subscription.errors && (subscription.invalid || subscription.touched)">
+                    <small class="text-danger"  *ngIf="subscription.errors.required">Medical subscription is required</small>
+                </div>
+            </div>
+        
+            <div class="form-group">
+                <label for="obs">Observation</label>
+                <input type="text" #obs="ngModel"
+                       [class.is-invalid]="obs.invalid && obs.touched"
+                       [class.is-valid]="obs.valid"
+                       class="form-control" name="obs" [(ngModel)]="pacient.obs">
+                <div *ngIf="obs.errors && (obs.invalid || obs.touched)">
+                    <small class="text-danger"  *ngIf="obs.errors.required">Observation is required</small>
+                </div>
+            </div>
+        
+            <div class="form-group">
+                <label for="history">History</label>
+                <input type="text" #history="ngModel"
+                       [class.is-invalid]="history.invalid && history.touched"
+                       [class.is-valid]="history.valid"
+                       class="form-control" name="history" [(ngModel)]="pacient.history">
+                <div *ngIf="history.errors && (history.invalid || history.touched)">
+                    <small class="text-danger"  *ngIf="history.errors.required">History is required</small>
+                </div>
+            </div>
+        
+            <button [disabled]="pacientForm.form.invalid" class="btn btn-primary" (click)="updatePacient(pacient)">Save</button>
+            <app-delete-button [deleteID]="pacientId"></app-delete-button>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,60 @@
+<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-12 col-md-1 col-lg-4 col-xl-4">
+
+        </div>
+        <div class="col-sm-12 col-md-10 col-lg-4 col-xl-4">
+            <form #loginForm="ngForm">
+                <h3>{{title}}</h3>
+
+                <!-- Email -->
+                <div class="form-group">
+                    <div class="input-group">
+                        <span class="input-group-addon">
+                            <i class="glyphicon glyphicon-user"></i>
+                        </span>
+                        <input type="text" required #email="ngModel"
+                            pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+                            placeholder="Email"
+                            type="email"
+                            ng-class="({put condition here without curve brackets}) ? 'colorwhiteinput' : ''"
+                            class="form-control" name="email" [(ngModel)]="user.email"/>
+                    </div>
+                    <div class="form-group" *ngIf="email.errors && (email.invalid || email.touched)">
+                        <small class="text-danger" *ngIf="email.errors.required">Email is required.</small>
+                    </div>
+                </div>
+
+                <!-- Password -->
+                <div class="form-group">
+                    <div class="input-group">
+                        <span class="input-group-addon">
+                            <i class="glyphicon glyphicon-lock"></i>
+                        </span>
+                        <input type="text" required #password="ngModel"
+                            pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+                            placeholder="Password"
+                            type="password"
+                            ng-class="({put condition here without curve brackets}) ? 'colorwhiteinput' : ''"
+                            class="form-control" name="password" [(ngModel)]="user.password">
+                    </div>
+                    <div class="form-group" *ngIf="password.errors && (password.invalid || password.touched)">
+                        <small class="text-danger"  *ngIf="password.errors.required">Password is required.</small>
+                    </div>
+                </div>
+
+                <!-- Button -->
+                <p>
+                    <button [disabled]="loginForm.form.invalid" 
+                        class="btn btn-primary" 
+                        (click)="loginUser(user.email,user.password)">Login</button>
+                </p>
+                <p> Don't have an account? <a href="register">Register</a></p>
+                <p> {{ errorMsg }} </p>
+            </form>
+        </div>
+        <div class="col-sm-12 col-md-1 col-lg-4 col-xl-4">
+        </div>
+    </div>
+</div>

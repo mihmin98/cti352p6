@@ -1,0 +1,27 @@
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" routerLink="">Library</a>
+    <div *ngIf="!isLoggedIn; else loggedOut">
+        <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+            <li class="nav-item active">
+            <a class="nav-link" routerLink="">Home</a>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link" routerLink="/add">Add transaction</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" routerLink="/transactions-list">List all informations</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" routerLink="/login">Login</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" routerLink="#">Logout</a>
+            </li> 
+        </ul>
+        </div>
+    </div>
+    <ng-template #loggedOut>          
+    </ng-template>
+</nav>

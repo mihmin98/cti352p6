@@ -1,0 +1,18 @@
+[
+    {
+      "id": 1,
+      "firstName": "John",
+      "lastName":"Doe",
+      "email": "john@doe.com",
+      "password": "12345",
+      "ExtraField": "test"
+    },
+    {
+      "id": 2,
+      "firstName": "John2",
+      "LastName": "Doe2",
+      "email": "john2@doe2.com",
+      "password": "12346",
+      "ExtraField": "test1"
+    }
+]

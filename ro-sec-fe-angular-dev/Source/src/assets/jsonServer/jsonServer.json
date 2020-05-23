@@ -1,0 +1,109 @@
+{
+  "clients": [
+    {
+      "id": 1,
+      "firstName": "client1",
+      "lastName": "12",
+      "email": "2020-02-02"
+    },
+    {
+      "id": 2,
+      "firstName": "client2",
+      "lastName": "12",
+      "email": "2020-02-02"
+    },
+    {
+      "id": 3,
+      "firstName": "client3",
+      "lastName": "12",
+      "email": "2020-02-02"
+    }
+  ],
+  "books": [
+    {
+      "id": 1,
+      "title": "boook",
+      "authorId": "12",
+      "publicationDate": "2020-02-02",
+      "quantity": "3"
+    },
+    {
+      "id": 2,
+      "title": "book",
+      "authorId": "12",
+      "publicationDate": "2020-02-02",
+      "quantity": "3"
+    },
+    {
+      "id": 3,
+      "title": "book",
+      "authorId": "12",
+      "publicationDate": "2020-02-02",
+      "quantity": "3"
+    }
+  ],
+  "transactions": [
+    {
+      "id": 1,
+      "clientId": 1,
+      "bookId": "transaction",
+      "price": "12",
+      "rentalDate": "2020-02-02",
+      "returnDate": "2020-12-12",
+      "rentalDuration": " "
+    },
+    {
+      "id":2 ,
+      "clientId": 2,
+      "bookId": "Dsdeads",
+      "price": "123",
+      "rentalDate": "2020-02-02",
+      "returnDate": "2020-12-12",
+      "rentalDuration": " "
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "firstName": "viorel",
+      "lastName": "voichita",
+      "email": "viorel@voichita",
+      "password": "t12345"
+    },
+    {
+      "email": "balescuovidiu@gmail.com",
+      "lastName": "Balescu",
+      "firstName": "Ovidiu",
+      "password": "ParolaMare123",
+      "id": 2
+    },
+    {
+      "email": "test@wipro.com",
+      "lastName": "Test",
+      "firstName": "Test",
+      "password": "Test123456",
+      "id": 3
+    },
+    {
+      "email": "balescuovidiu@gmail.com",
+      "lastName": "Balescu",
+      "firstName": "Ovidiu",
+      "password": "Movirob123",
+      "id": 4
+    },
+    {
+      "email": "viorel@voichita.com",
+      "lastName": "Viroe",
+      "firstName": "Vewef",
+      "password": "Viorel22",
+      "id": 5
+    },
+    {
+      "email": "ioanarciripann@gmail.com",
+      "password": "Parola123!",
+      "lastName": "Bianca",
+      "firstName": "Biancaa",
+      "id": 6
+    }
+  ]
+}

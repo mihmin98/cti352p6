@@ -1,0 +1,49 @@
+.view{
+ background-color:whitesmoke;
+ padding: 20px;
+}
+.viewName{
+    background-color: whitesmoke;
+    display: table;
+    width:100%;
+}
+.viewFirstName{
+    float: left;
+    width: 47%;
+}
+.viewLastName{
+    float: right;
+    width: 50%;
+}
+.viewCI{
+    display: table;
+    width: 100%;
+}
+.viewCNP{
+    float: left;
+    width: 31.5%;
+}
+.viewSeriaAndNumber{
+    float: right;
+    width: 65%;
+}
+.viewSeria{
+    float: left;
+    width: 45%;
+}
+.viewNumber{
+    float: right;
+    width: 50%;
+}
+.viewGenderAndBirthdate{
+    display: table;
+    width: 100%;
+}
+.viewGender{
+    float: left;
+    width: 47%;
+}
+.viewBirthdate{
+    float: right;
+    width: 50%;
+}
