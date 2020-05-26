@@ -11,6 +11,8 @@ import { FormsModule , ReactiveFormsModule} from '@angular/forms';
 import { DeleteButtonComponent } from './components/delete-button/delete-button.component';
 import { TransactionService } from './services/transaction.service';
 import { UserService } from './services/user.service';
+import { DeleteClientComponent } from './components/delete-client/delete-client.component';
+import { DeleteBookComponent } from './components/delete-book/delete-book.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +20,8 @@ import { UserService } from './services/user.service';
     NavbarComponent,
     routingComponents,
     DeleteButtonComponent,
+    DeleteClientComponent,
+    DeleteBookComponent,
   ],
   imports: [
     BrowserModule,

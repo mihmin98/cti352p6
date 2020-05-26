@@ -8,6 +8,8 @@ import { Observable, throwError } from 'rxjs';
 import { HttpClient, HttpErrorResponse} from '@angular/common/http';
 import { catchError } from 'rxjs/operators';
 import { ITransactionResponse } from '../interfaces/transactionResponse';
+import { IClientResponse } from '../interfaces/clientResponse';
+import { IBookResponse } from '../interfaces/bookResponse';
 
 @Injectable({
   providedIn: 'root'
@@ -16,6 +18,8 @@ export class TransactionService {
 
   urlSelectTransaction = new Url();
   urlSelectBook = new Url();
+  urlSelectClient = new Url();
+
   urlTransactions;
   urlBooks;
   urlClients;
@@ -30,10 +34,38 @@ export class TransactionService {
                     .pipe(catchError(this.errorHandler));
   }
 
+  addClient(client: Client){
+    this.urlClients = this.urlSelectClient.getUrlAddClient();
+
+    return this.http.post<IClientResponse>(`${this.urlClients}`, client)
+                    .pipe(catchError(this.errorHandler));
+  }
+
+  addBook(book: Book){
+    this.urlBooks = this.urlSelectBook.getUrlAddBook();
+
+    return this.http.post<IBookResponse>(`${this.urlBooks}`, book)
+                    .pipe(catchError(this.errorHandler));
+  }
+
   deletetransaction(id: string){
     this.urlTransactions = this.urlSelectTransaction.getUrlDeletetransaction();
 
     return this.http.delete<ITransactionResponse>(`${this.urlTransactions}/${id}`)
+                    .pipe(catchError(this.errorHandler));
+  }
+
+  deleteClient(id: string){
+    this.urlClients = this.urlSelectClient.getUrlDeleteClient();
+
+    return this.http.delete<IClientResponse>(`${this.urlClients}/${id}`)
+                    .pipe(catchError(this.errorHandler));
+  }
+
+  deleteBook(id: string){
+    this.urlBooks = this.urlSelectBook.getUrlDeleteBook();
+
+    return this.http.delete<IBookResponse>(`${this.urlBooks}/${id}`)
                     .pipe(catchError(this.errorHandler));
   }
 

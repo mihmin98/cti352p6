@@ -2,66 +2,47 @@
   "clients": [
     {
       "id": 1,
-      "firstName": "client1",
-      "lastName": "12",
-      "email": "2020-02-02"
-    },
-    {
-      "id": 2,
-      "firstName": "client2",
-      "lastName": "12",
-      "email": "2020-02-02"
+      "firstName": "Ioana",
+      "lastName": "sasdas",
+      "email": "Sads"
     },
     {
       "id": 3,
-      "firstName": "client3",
-      "lastName": "12",
-      "email": "2020-02-02"
+      "firstName": "Ana",
+      "lastName": "sasdas",
+      "email": "Sads"
+    },
+    {
+      "firstName": "Bianca",
+      "lastName": "Ciripan",
+      "email": "ioanarciripan@gmail.com",
+      "id": 4
     }
   ],
   "books": [
     {
-      "id": 1,
-      "title": "boook",
+      "id": "13",
+      "title": "boook11",
       "authorId": "12",
       "publicationDate": "2020-02-02",
       "quantity": "3"
     },
     {
-      "id": 2,
-      "title": "book",
+      "id": "14",
+      "title": "book666",
       "authorId": "12",
       "publicationDate": "2020-02-02",
       "quantity": "3"
     },
     {
-      "id": 3,
-      "title": "book",
-      "authorId": "12",
+      "title": "frer",
+      "authorId": "frgtr",
       "publicationDate": "2020-02-02",
-      "quantity": "3"
+      "quantity": "12",
+      "id": "jjYNjug"
     }
   ],
-  "transactions": [
-    {
-      "id": 1,
-      "clientId": 1,
-      "bookId": "transaction",
-      "price": "12",
-      "rentalDate": "2020-02-02",
-      "returnDate": "2020-12-12",
-      "rentalDuration": " "
-    },
-    {
-      "id":2 ,
-      "clientId": 2,
-      "bookId": "Dsdeads",
-      "price": "123",
-      "rentalDate": "2020-02-02",
-      "returnDate": "2020-12-12",
-      "rentalDuration": " "
-    }
-  ],
+  "transactions": [],
   "users": [
     {
       "id": 1,

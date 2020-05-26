@@ -6,12 +6,21 @@ export class Url{
     selectUrl = 0;
 
     url;
+
     urlAddtransaction;
+    urlAddClient;
+    urlAddBook
+
     urlDeletetransaction;
+    urlDeleteClient;
+    urlDeleteBook;
+
     urlGettransaction;
     urlGetbook;
     urlGetclient;
+
     urlGettransactionAfterId;
+
     urlAddUser;
     urlLogin;
     urlLogout;
@@ -32,6 +41,28 @@ export class Url{
       return this.urlAddtransaction;
     }
 
+    getUrlAddClient(){
+      this.urlAddClient = this.urlFakeJsonFile.concat('clients');
+
+      if (this.selectUrl === 1)
+      {
+         this.urlAddClient = this.urlBackendtransaction.concat('client/add');
+      }
+
+      return this.urlAddClient;
+    }
+
+    getUrlAddBook(){
+      this.urlAddBook = this.urlFakeJsonFile.concat('books');
+
+      if (this.selectUrl === 1)
+      {
+         this.urlAddBook = this.urlBackendtransaction.concat('book/add');
+      }
+
+      return this.urlAddBook;
+    }
+
     getUrlDeletetransaction(){
       this.urlDeletetransaction = this.urlFakeJsonFile.concat('transactions');
 
@@ -41,6 +72,28 @@ export class Url{
       }
 
       return this.urlDeletetransaction;
+    }
+
+    getUrlDeleteClient(){
+      this.urlDeleteClient = this.urlFakeJsonFile.concat('clients');
+
+      if (this.selectUrl === 1)
+      {
+         this.urlDeleteClient = this.urlBackendtransaction.concat('client/delete');
+      }
+
+      return this.urlDeleteClient;
+    }
+
+    getUrlDeleteBook(){
+      this.urlDeleteBook = this.urlFakeJsonFile.concat('books');
+
+      if (this.selectUrl === 1)
+      {
+         this.urlDeleteBook = this.urlBackendtransaction.concat('book/delete');
+      }
+
+      return this.urlDeleteBook;
     }
 
     getUrlGettransactionAfterId(){

@@ -1,14 +1,14 @@
 <div class = "transactionsInfo">
-
-  </div><div class="card m-3">
+  <div class="card m-3">
     <h4 class="card-header">List of transactions</h4>
     <ul class="transactions">
       <li class='myli' *ngFor="let transaction of transactions" (click)="onSelectTransaction(transaction)">
         <span>{{transaction.bookId}}</span> 
       </li>
   </ul>
-  <div></div>
+  
 
+  
 
   <div class="card-body" *ngIf="selectedtransaction">
     <h4 class="card-header">{{selectedtransaction.bookId | uppercase}} Details</h4>
@@ -54,6 +54,8 @@
     <app-delete-button [deleteID]="selectedtransaction.id"></app-delete-button>  
   </div>
 </div>
+</div>
+
 
 <div class = "booksInfo">
   <div class="card m-3">
@@ -62,8 +64,7 @@
       <li class='myli' *ngFor="let book of books" (click)="onSelectBook(book)">
         <span>{{book.title}}</span> 
       </li>
-  </ul>
-  <div></div>
+    </ul>
 
   <div class="card-body" *ngIf="selectedbook">
     <h4 class="card-header">{{selectedbook.title | uppercase}} Details</h4>
@@ -84,9 +85,11 @@
         <span>Quantity: </span>{{selectedbook.quantity}}
       </div>
     </div>
+    <app-delete-book [deleteID]="selectedbook.id"></app-delete-book> 
   </div>
-
 </div>
+</div>
+
 
 <div class = "clientsInfo">
   <div class="card m-3">
@@ -95,10 +98,11 @@
       <li class='myli' *ngFor="let client of clients" (click)="onSelectClient(client)">
         <span>{{client.firstName}}</span> 
       </li>
-  </ul>
-  <div></div>
+    </ul>
 
-  <div class="card-body" *ngIf="selectedbook">
+  
+
+  <div class="card-body" *ngIf="selectedclient">
     <h4 class="card-header">{{selectedclient.firstName | uppercase}} Details</h4>
       <div class="details">
       <div>
@@ -114,7 +118,9 @@
         <span>Email: </span>{{selectedclient.email}}
       </div>
     </div>
+    <app-delete-client [deleteID]="selectedclient.id"></app-delete-client> 
   </div>
-
 </div>
+</div>
+
 

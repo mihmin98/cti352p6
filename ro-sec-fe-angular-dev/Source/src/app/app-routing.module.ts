@@ -14,6 +14,8 @@ const routes: Routes = [
   {path: '', component: HomeComponent},
   {path: 'add', component: AddComponent},
   {path: 'transactions-list', component: TransactionsComponent},
+  {path: 'clients-list', component: TransactionsComponent},
+  {path: 'books-list', component: TransactionsComponent},
   //{path: 'book&client-list', component: AddComponent},
 ];
 

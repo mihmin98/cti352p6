@@ -2,6 +2,8 @@ import { Component, OnInit, Input } from '@angular/core';
 import { Router } from '@angular/router';
 import { TransactionService } from 'src/app/services/transaction.service';
 import { ITransactionResponse } from 'src/app/interfaces/transactionResponse';
+import { IClientResponse } from 'src/app/interfaces/clientResponse';
+import { IBookResponse } from 'src/app/interfaces/bookResponse';
 import { Pacient } from 'src/app/classes/pacient';
 
 @Component({
@@ -23,27 +25,34 @@ export class DeleteButtonComponent implements OnInit {
       console.log("Deleted ID" + this.deleteID);
   }
 
+  
+  deleteClient(){
+    this.transactionService.deleteClient(this.deleteID)
+                       .subscribe(response => this.processResponseClient(response),
+                                  error => alert(error.message));
+
+     console.log("Deleted ID" + this.deleteID);
+ }
+
+ 
+ deleteBook(){
+  this.transactionService.deleteBook(this.deleteID)
+                     .subscribe(response => this.processResponseBook(response),
+                                error => alert(error.message));
+
+   console.log("Deleted ID" + this.deleteID);
+}
+
   processResponse(response: ITransactionResponse){
     this.router.navigate(['transactions-list']);
-    // response.logError = true;
-    // if (response.logError === true){
-    //   if (response.error.length === 0){
-    //     alert('The transaction was deleted!\n');
-    //     this.router.navigate(['transactions-list']);
-    //   }
-    //   else{
-    //     let errors = '';
-    //     for (let i = 0; i < response.error.length ; i++ ){
-    //       errors += response.error[i] + '\n';
-    //     }
-    //     alert('The delete operation fail debause of:\n\n' + errors);
-    //   }
+  }
 
-    // }
-    // else{
-    //   alert('To Deelte a transaction must be login!');
-    //   this.router.navigate(['login']);
-    // }
+  processResponseClient(response: IClientResponse){
+    this.router.navigate(['clients-list']);
+  }
+
+  processResponseBook(response: IBookResponse){
+    this.router.navigate(['books-list']);
   }
 
   ngOnInit(): void {

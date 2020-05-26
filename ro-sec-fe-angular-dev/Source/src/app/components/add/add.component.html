@@ -166,3 +166,107 @@
         </form>
     </div>
 </div>
+
+
+<!-- main app container -->
+<div class="card m-3">
+    <h5 class="card-header">Add a client</h5>
+    <div class="card-body">
+        <form [formGroup]="clientForm" (ngSubmit)="onSubmitClient()">
+            <div class="form-row">
+
+             
+                <div class="form-group col-5">
+                    <label>First Name</label>
+                    <input type="text" formControlName="firstName" class="form-control" [ngClass]="{ 'is-invalid': submittedClient && fClient.firstName.errors }" />
+                    <div *ngIf="submittedClient && fClient.firstName.errors" class="invalid-feedback">
+                        <div *ngIf="fClient.firstName.errors.required">First Name is required</div>
+                        <div *ngIf="fClient.firstName.errors.pattern">First Name should have min 3 characters and max 30</div>
+                    </div>
+                </div>
+
+                <div class="form-group col-5">
+                    <label>Last Name</label>
+                    <input type="text" formControlName="lastName" class="form-control" [ngClass]="{ 'is-invalid': submittedClient && fClient.lastName.errors }" />
+                    <div *ngIf="submittedClient && fClient.lastName.errors" class="invalid-feedback">
+                        <div *ngIf="fClient.lastName.errors.required">Last Name is required</div>
+                        <div *ngIf="fClient.lastName.errors.pattern">Last Name should have min 3 characters and max 30</div>
+                    </div>
+                </div>
+
+
+                <div class="form-group col-5">
+                    <label>Email</label>
+                    <input type="text" formControlName="email" class="form-control" [ngClass]="{ 'is-invalid': submittedClient && fClient.email.errors }" />
+                    <div *ngIf="submittedClient && fClient.email.errors" class="invalid-feedback">
+                        <div *ngIf="fClient.email.errors.required">History is required</div>
+                    </div>
+                </div> 
+
+            </div>
+          
+          
+            <div class="text-center">
+                <button id="addButton" class="btn btn-primary mr-1" >Add</button>
+                <button id = "cancelButton" class="btn btn-secondary" type="reset" (click)="onResetClient()">Cancel</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+<!-- main app container -->
+<div class="card m-3">
+    <h5 class="card-header">Add a book</h5>
+    <div class="card-body">
+        <form [formGroup]="bookForm" (ngSubmit)="onSubmitBook()">
+            <div class="form-row">
+
+
+                <div class="form-group col-5">
+                    <label>Title</label>
+                    <input type="text" formControlName="title" class="form-control" [ngClass]="{ 'is-invalid': submittedBook && fBook.title.errors }" />
+                    <div *ngIf="submittedBook && fBook.title.errors" class="invalid-feedback">
+                        <div *ngIf="fBook.title.errors.required">Title is required</div>
+                        <div *ngIf="fBook.title.errors.pattern">Title should have min 3 characters and max 30</div>
+                    </div>
+                </div>
+
+                <div class="form-group col-5">
+                    <label>Author ID</label>
+                    <input type="text" formControlName="authorId" class="form-control" [ngClass]="{ 'is-invalid': submittedBook && fBook.authorId.errors }" />
+                    <div *ngIf="submittedBook && fBook.authorId.errors" class="invalid-feedback">
+                        <div *ngIf="fBook.authorId.errors.required">Author ID is required</div>
+                    </div>
+                </div>
+
+
+                <div class="form-group col-5">
+                    <label>Publication Date</label>
+                    <input type="text" formControlName="publicationDate" class="form-control" [ngClass]="{ 'is-invalid': submittedBook && fBook.publicationDate.errors }" />
+                    <div *ngIf="submittedBook && fBook.publicationDate.errors" class="invalid-feedback">
+                        <div *ngIf="fBook.publicationDate.errors.required">Publication Date is required</div>
+                        <div *ngIf="fBook.publicationDate.errors.pattern">Publication Date should be a valid date in yyyy-mm-dd format</div>
+                    </div>
+                </div>
+                
+                
+                <div class="form-group col-5">
+                    <label>Quantity</label>
+                    <input type="text" formControlName="quantity" class="form-control" [ngClass]="{ 'is-invalid': submittedBook && fBook.quantity.errors }" />
+                    <div *ngIf="submittedBook && fBook.quantity.errors" class="invalid-feedback">
+                        <div *ngIf="fBook.quantity.errors.required">Quantity is required</div>
+                        <div *ngIf="fBook.quantity.errors.pattern">Quantity should be in number format</div>
+                    </div>
+                </div>
+
+            </div>
+          
+          
+            <div class="text-center">
+                <button id="addButton" class="btn btn-primary mr-1">Add</button>
+                <button id = "cancelButton" class="btn btn-secondary" type="reset" (click)="onResetBook()">Cancel</button>
+            </div>
+        </form>
+    </div>
+</div>
