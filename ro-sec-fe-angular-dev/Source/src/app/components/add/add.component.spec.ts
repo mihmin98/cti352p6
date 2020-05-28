@@ -47,161 +47,116 @@ describe('AddComponent', () => {
     expect(component.title).toEqual('Add');
   });
 
-  it('form should be valid', () => {
-    const itemFirstName = component.addForm.controls.firstName;
-    itemFirstName.setValue('ssss');
+  it('Add form should be valid', () => {
+    const itemClientId= component.addForm.controls.clientId;
+    itemClientId.setValue('2');
 
-    const itemLastName = component.addForm.controls.lastName;
-    itemLastName.setValue('Fdgregr');
+    const itemmBookId = component.addForm.controls.bookId;
+    itemmBookId.setValue('2');
 
-    const itemCnp = component.addForm.controls.cnp;
-    itemCnp.setValue('1234567890123');
+    const itemPrice = component.addForm.controls.price;
+    itemPrice.setValue('12');
 
-    const itemSeria = component.addForm.controls.seria;
-    itemSeria.setValue('AZ');
+    const itemRentalDate = component.addForm.controls.rentalDate;
+    itemRentalDate.setValue('1998-03-05');
 
-    const itemNumber = component.addForm.controls.number;
-    itemNumber.setValue('102455');
+    const itemReturnDate = component.addForm.controls.returnDate;
+    itemReturnDate.setValue('1998-03-05');
 
-    const itemGender = component.addForm.controls.gender;
-    itemGender.setValue('Male');
-
-    const itemDob = component.addForm.controls.dob;
-    itemDob.setValue('1998-03-05');
-
-    const itemSupplier = component.addForm.controls.supplier;
-    itemSupplier.setValue('AffZ');
-
-    const itemSubscription = component.addForm.controls.subscription;
-    itemSubscription.setValue('102455');
-
-    const itemObs = component.addForm.controls.obs;
-    itemObs.setValue('Male');
-
-    const itemHistory = component.addForm.controls.history;
-    itemHistory.setValue('fdgfd');
+    const itemSupplier = component.addForm.controls.rentalDuration;
+    itemSupplier.setValue('3');
 
     expect(component.addForm.valid).toBeTruthy();
   });
 
-  it('should not be valid when firstName more than 3 characters', () => {
-    const  itemFirstName = component.addForm.controls.firstName;
-    itemFirstName.setValue('Ffdsfsd');
+  it('Book form should be valid', () => {
+    const itemTitle= component.bookForm.controls.title;
+    itemTitle.setValue('Titlul');
 
-    expect(itemFirstName.valid).toBeTruthy();
+    const itemAuthorId = component.bookForm.controls.authorId;
+    itemAuthorId.setValue('2');
+
+    const itemPublicationDate = component.bookForm.controls.publicationDate;
+    itemPublicationDate.setValue('1998-03-05');
+
+    const itemQuantity = component.bookForm.controls.quantity;
+    itemQuantity.setValue('19');
+
+    expect(component.bookForm.valid).toBeTruthy();
   });
 
-  it('should not be valid when firstName have just 2 characters', () => {
-    const  itemFirstName = component.addForm.controls.firstName;
-    itemFirstName.setValue('Ff');
 
-    expect(itemFirstName.valid).toBeFalsy();
+  it('Client form should be valid', () => {
+    const itemFirstName= component.clientForm.controls.firstName;
+    itemFirstName.setValue('Ioana');
+
+    const itemLastName = component.clientForm.controls.lastName;
+    itemLastName.setValue('Ciripan');
+
+    const itemEmail = component.clientForm.controls.email;
+    itemEmail.setValue('ioanaciripan@gmail.com');
+
+    expect(component.clientForm.valid).toBeTruthy();
   });
 
-  it('should not be valid when lastName more than 3 characters', () => {
-    const  item = component.addForm.controls.lastName;
-    item.setValue('Ffdsfsd');
 
-    expect(item.valid).toBeTruthy();
-  });
-
-  it('should not be valid when lastName have just 2 characters', () => {
-    const  item = component.addForm.controls.lastName;
-    item.setValue('Ff');
-
-    expect(item.valid).toBeFalsy();
-  });
-
-  it('should be valid when cnp has 13 digits', () => {
-    const  item = component.addForm.controls.cnp;
-    item.setValue('1234567890123');
-
-    expect(item.valid).toBeTruthy();
-  });
-
-  it('should not be valid when cnp doesn t have 13 digits', () => {
-    const  item = component.addForm.controls.cnp;
-    item.setValue('123');
-
-    expect(item.valid).toBeFalsy();
-  });
-
-  it('should be valid when seria has 2 characters', () => {
-    const  item = component.addForm.controls.seria;
-    item.setValue('AZ');
-
-    expect(item.valid).toBeTruthy();
-  });
-
-  it('should not be valid when seria doesn t have 2 characters', () => {
-    const  item = component.addForm.controls.seria;
-    item.setValue('dsfsd');
-
-    expect(item.valid).toBeFalsy();
-  });
-
-  it('should be valid when seria number has 6 digits', () => {
-    const  item = component.addForm.controls.number;
-    item.setValue('123456');
-
-    expect(item.valid).toBeTruthy();
-  });
-
-  it('should not be valid when number doesn t have 6 digits', () => {
-    const  item = component.addForm.controls.number;
-    item.setValue('1234567');
-
-    expect(item.valid).toBeFalsy();
-  });
 
   it('should not be valid when birthdate doesn t have date format', () => {
-    const  item = component.addForm.controls.dob;
+    const  item = component.addForm.controls.rentalDate;
     item.setValue('1234567');
 
     expect(item.valid).toBeFalsy();
   });
 
   it('should not be valid when birthdate have date format but is not a valid date', () => {
-    const  item = component.addForm.controls.dob;
+    const  item = component.addForm.controls.rentalDate;
     item.setValue('30/33/2021');
 
     expect(item.valid).toBeFalsy();
   });
 
   it('should  be valid when birthdate have date format and is a valid date', () => {
-    const  item = component.addForm.controls.dob;
+    const  item = component.addForm.controls.rentalDate;
     item.setValue('1990-02-02');
 
     expect(item.valid).toBeTruthy();
   });
 
-  it('should not be valid when supplier have more than 30 characters', () => {
-    const  item = component.addForm.controls.supplier;
-    item.setValue('abiashdosbfhudshfgiodhdvfdvfvfvfvrfcfdvfvfvfgoifd');
+
+  it('should not be valid when birthdate doesn t have date format', () => {
+    const  item = component.addForm.controls.returnDate;
+    item.setValue('1234567');
 
     expect(item.valid).toBeFalsy();
   });
 
-  it('should be valid when supplier have more max 15 characters', () => {
-    const  item = component.addForm.controls.supplier;
-    item.setValue('aaaa');
+  it('should not be valid when birthdate have date format but is not a valid date', () => {
+    const  item = component.addForm.controls.returnDate;
+    item.setValue('30/33/2021');
+
+    expect(item.valid).toBeFalsy();
+  });
+
+  it('should  be valid when birthdate have date format and is a valid date', () => {
+    const  item = component.addForm.controls.returnDate;
+    item.setValue('1990-02-02');
 
     expect(item.valid).toBeTruthy();
   });
 
-  it ('should contain 2 button tags', () => {
+  it ('should contain 6 button tags', () => {
     const buttonEle = fixture.debugElement.queryAll(By.css('button'));
-    expect(buttonEle.length).toBe(2);
+    expect(buttonEle.length).toBe(6);
   });
 
-  it ('should contain 10 input tags', () => {
+  it ('should contain 13 input tags', () => {
     const buttonEle = fixture.debugElement.queryAll(By.css('input'));
-    expect(buttonEle.length).toBe(10);
+    expect(buttonEle.length).toBe(13);
   });
 
-  it ('should contain 1 form tag', () => {
+  it ('should contain 3 form tag', () => {
     const buttonEle = fixture.debugElement.queryAll(By.css('form'));
-    expect(buttonEle.length).toBe(1);
+    expect(buttonEle.length).toBe(3);
   });
 
   it('should call function addtransaction', fakeAsync(() => {
@@ -211,46 +166,6 @@ describe('AddComponent', () => {
     expect(component.addtransaction).toHaveBeenCalled();
   }));
 
-  it('should call function addtransaction when click in Add button and the form is valid', fakeAsync(() => {
-    const itemFirstName = component.addForm.controls.firstName;
-    itemFirstName.setValue('ssss');
-
-    const itemLastName = component.addForm.controls.lastName;
-    itemLastName.setValue('Fdgregr');
-
-    const itemCnp = component.addForm.controls.cnp;
-    itemCnp.setValue('1234567890123');
-
-    const itemSeria = component.addForm.controls.seria;
-    itemSeria.setValue('AZ');
-
-    const itemNumber = component.addForm.controls.number;
-    itemNumber.setValue('102455');
-
-    const itemGender = component.addForm.controls.gender;
-    itemGender.setValue('Male');
-
-    const itemDob = component.addForm.controls.dob;
-    itemDob.setValue('1998-03-05');
-
-    const itemSupplier = component.addForm.controls.supplier;
-    itemSupplier.setValue('AfvfvZ');
-
-    const itemSubscription = component.addForm.controls.subscription;
-    itemSubscription.setValue('102455');
-
-    const itemObs = component.addForm.controls.obs;
-    itemObs.setValue('Male');
-
-    const itemHistory = component.addForm.controls.history;
-    itemHistory.setValue('fdgfd');
-
-    spyOn(component, 'addtransaction');
-    const button = fixture.debugElement.nativeElement.querySelector('#addButton');
-    button.click();
-    fixture.detectChanges();
-    expect(component.addtransaction).toHaveBeenCalled();
-  }));
 
   it ('should call function onReset()', () => {
     const button = fixture.debugElement.nativeElement.querySelector('#cancelButton');

@@ -28,14 +28,6 @@ describe('NavbarComponent', () => {
     expect(aEle.length==6).toBeTruthy();
   });
 
-  it ('Positive Test: should be the first a tag', ()=> {
-    const aEle = fixture.debugElement.queryAll(By.css('a'));
-    if (aEle.length == 6)
-    {
-      const aEle1: HTMLAnchorElement = aEle[0].nativeElement;
-      expect(aEle1.textContent).toBe('Demo');
-    }
-  }); 
   it ('Positive Test: should be the second a tag', ()=> {
     const aEle = fixture.debugElement.queryAll(By.css('a'));
     if (aEle.length == 6)
@@ -49,7 +41,7 @@ describe('NavbarComponent', () => {
     if (aEle.length == 6)
     {
       const aEle3: HTMLAnchorElement = aEle[2].nativeElement;
-      expect(aEle3.textContent).toBe('Add');
+      expect(aEle3.textContent).toBe('Add transaction');
     }
   }); 
   it ('Positive Test: should be the forth a tag', ()=> {
@@ -57,7 +49,7 @@ describe('NavbarComponent', () => {
     if (aEle.length == 6)
     {
       const aEle4: HTMLAnchorElement = aEle[3].nativeElement;
-      expect(aEle4.textContent).toBe('List');
+      expect(aEle4.textContent).toBe('List all informations');
     }
   }); 
   it ('Positive Test: should be the fifth a tag', ()=> {
